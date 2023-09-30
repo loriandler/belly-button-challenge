@@ -40,6 +40,10 @@ function BarChart(selectedIndividual) {
 }
 
 // Populate the dropdown
+dropdown.append("option")
+        .attr("value", "")
+        .text("");
+
 names.forEach((individual, index) => {
     dropdown.append("option")
         .attr("value", index)
@@ -84,7 +88,14 @@ let trace2 = {
 let layout2 = {
     title: "Bubble Chart for Samples",
     xaxis: { title: "OTU IDs"},
-    yaxis: { title: "Sample Values"}
+    yaxis: { title: "Sample Values"},
+    margins: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0
+    },
+    hovermode: "closest"
 };
 
 Plotly.newPlot('bubble-chart', [trace2], layout2);
