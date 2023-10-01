@@ -29,14 +29,14 @@ function init() {
         });
 
         //set up first value in list
-        let sample_one = names[0];
-        console.log(sample_one);
+        let init_sample = names[0];
+        console.log(init_sample);
 
         //Initial Plots
-        Metadata(sample_one);
-        BarChart(sample_one);
-        BubbleChart(sample_one);
-        GaugeChart(sample_one);
+        Metadata(init_sample);
+        BarChart(init_sample);
+        BubbleChart(init_sample);
+        GaugeChart(init_sample);
     
     }).catch(error => {
         console.error("Error fetching data: ", error);
@@ -49,7 +49,7 @@ function Metadata(sample) {
     //Get data for dropdown
     d3.json(URL).then((data) => {
         let metadata = data.metadata;
-        let value = metadata.filter(result => result.id == sample);
+        let value = metadata.filter(item => item.id == sample);
         console.log(value)
 
         // first index from array
@@ -76,7 +76,7 @@ function BarChart(sample) {
         let sampleInfo = data.samples;
 
         // Filter results based on value
-        let value = sampleInfo.filter(result => result.id == sample);
+        let value = sampleInfo.filter(item => item.id == sample);
 
         // First index from array
         let valueData = value[0];
@@ -128,7 +128,7 @@ function BubbleChart(sample) {
         let sampleInfo = data.samples;
 
         // Filter results based on value
-        let value = sampleInfo.filter(result => result.id == sample);
+        let value = sampleInfo.filter(item => item.id == sample);
 
         // First index from array
         let valueData = value[0];

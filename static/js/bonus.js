@@ -2,7 +2,7 @@
 function GaugeChart(sample) {
     d3.json(URL).then((data) => {
         let metadata = data.metadata;
-        let value = metadata.filter(result => result.id == sample);
+        let value = metadata.filter(item => item.id == sample);
         let valueData = value[0];
         let washFreq = Object.values(valueData)[6]
         let trace2 = {
