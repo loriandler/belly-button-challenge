@@ -1,6 +1,8 @@
 # belly-button-challenge
 Module 14 Challenge for UM Bootcamp
 
+Visit the site: https://loriandler.github.io/belly-button-challenge/ 
+
 # Background
 Based on the data, this dashboard was created to visualize the Belly Button Biodiversity dataset. This data catalogs the demographic information and charts associated with the data will all update with the microbes that colonize in human navels.  The dataset shows a small handful of microbial species (also called operational taxonomic units or OTUs) were present in more than 70% of people, while the rest were relatively rare.
 
